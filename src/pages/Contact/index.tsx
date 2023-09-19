@@ -1,11 +1,20 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 import { IonIcon } from "@ionic/react";
+import classNames from "classnames";
 import { paperPlane } from "ionicons/icons";
-import React from "react";
+import { NavContext, NavState } from "providers/NavProvider";
+import React, { useContext } from "react";
 
 const Contact: React.FC = () => {
+  const { navState } = useContext(NavContext);
+
   return (
-    <article className="contact" data-page="contact">
+    <article
+      className={classNames("contact", {
+        active: navState === NavState.CONTACT,
+      })}
+      data-page="contact"
+    >
       <header>
         <h2 className="h2 article-title">Contact</h2>
       </header>

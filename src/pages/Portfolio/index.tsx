@@ -1,7 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+
+import classNames from "classnames";
 import { IonIcon } from "@ionic/react";
 import { chevronDown, eyeOutline } from "ionicons/icons";
-import React from "react";
+import React, { useContext } from "react";
+import { NavContext, NavState } from "providers/NavProvider";
 
 import projImg1 from 'assets/images/project-1.jpg'
 import projImg2 from "assets/images/project-2.png"
@@ -14,8 +17,12 @@ import projImg8 from "assets/images/project-8.jpg"
 import projImg9 from "assets/images/project-9.png"
 
 const Portfolio: React.FC = () => {
+  const { navState } = useContext(NavContext);
+
   return (
-    <article className="portfolio" data-page="portfolio">
+    <article className={classNames("portfolio", {
+      active: navState === NavState.PORTFOLIO,
+    })} data-page="portfolio">
       <header>
         <h2 className="h2 article-title">Portfolio</h2>
       </header>

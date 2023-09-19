@@ -1,10 +1,19 @@
 import { IonIcon } from "@ionic/react";
+import classNames from "classnames";
 import { bookOutline } from "ionicons/icons";
-import React from "react";
+import { NavContext, NavState } from "providers/NavProvider";
+import React, { useContext } from "react";
 
 const Resume: React.FC = () => {
+  const { navState } = useContext(NavContext);
+
   return (
-    <article className="resume" data-page="resume">
+    <article
+      className={classNames("resume", {
+        active: navState === NavState.RESUME,
+      })}
+      data-page="resume"
+    >
       <header>
         <h2 className="h2 article-title">Resume</h2>
       </header>
@@ -169,4 +178,3 @@ const Resume: React.FC = () => {
 };
 
 export default Resume;
-

@@ -1,26 +1,36 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { IonIcon } from "@ionic/react";
 import { closeOutline } from "ionicons/icons";
-import React from "react";
+import React, { useContext } from "react";
+import { NavContext, NavState } from "providers/NavProvider";
+import classNames from "classnames";
 
-import clientLogo1 from 'assets/images/logo-1-color.png'
-import clientLogo2 from 'assets/images/logo-2-color.png'
-import clientLogo3 from 'assets/images/logo-3-color.png'
-import clientLogo4 from 'assets/images/logo-4-color.png'
-import clientLogo5 from 'assets/images/logo-5-color.png'
-import clientLogo6 from 'assets/images/logo-6-color.png'
-import clientAvatar1 from 'assets/images/avatar-1.png'
-import clientAvatar2 from 'assets/images/avatar-2.png'
-import clientAvatar3 from 'assets/images/avatar-3.png'
-import clientAvatar4 from 'assets/images/avatar-4.png'
-import iconDesign from "assets/images/icon-design.svg"
-import iconDev from "assets/images/icon-dev.svg"
-import iconApp from "assets/images/icon-app.svg"
-import iconPhoto from "assets/images/icon-photo.svg"
+import clientLogo1 from "assets/images/logo-1-color.png";
+import clientLogo2 from "assets/images/logo-2-color.png";
+import clientLogo3 from "assets/images/logo-3-color.png";
+import clientLogo4 from "assets/images/logo-4-color.png";
+import clientLogo5 from "assets/images/logo-5-color.png";
+import clientLogo6 from "assets/images/logo-6-color.png";
+import clientAvatar1 from "assets/images/avatar-1.png";
+import clientAvatar2 from "assets/images/avatar-2.png";
+import clientAvatar3 from "assets/images/avatar-3.png";
+import clientAvatar4 from "assets/images/avatar-4.png";
+import iconDesign from "assets/images/icon-design.svg";
+import iconDev from "assets/images/icon-dev.svg";
+import iconApp from "assets/images/icon-app.svg";
+import iconPhoto from "assets/images/icon-photo.svg";
+
 
 const About: React.FC = () => {
+  const { navState } = useContext(NavContext);
+
   return (
-    <article className="about" data-page="about">
+    <article
+      className={classNames("about", {
+        active: navState === NavState.ABOUT,
+      })}
+      data-page="about"
+    >
       <header>
         <h2 className="h2 article-title">About me</h2>
       </header>
@@ -52,11 +62,7 @@ const About: React.FC = () => {
         <ul className="service-list">
           <li className="service-item">
             <div className="service-icon-box">
-              <img
-                src={iconDesign}
-                alt="design icon"
-                width="40"
-              />
+              <img src={iconDesign} alt="design icon" width="40" />
             </div>
 
             <div className="service-content-box">
@@ -71,11 +77,7 @@ const About: React.FC = () => {
 
           <li className="service-item">
             <div className="service-icon-box">
-              <img
-                src={iconDev}
-                alt="Web development icon"
-                width="40"
-              />
+              <img src={iconDev} alt="Web development icon" width="40" />
             </div>
 
             <div className="service-content-box">
@@ -89,11 +91,7 @@ const About: React.FC = () => {
 
           <li className="service-item">
             <div className="service-icon-box">
-              <img
-                src={iconApp}
-                alt="mobile app icon"
-                width="40"
-              />
+              <img src={iconApp} alt="mobile app icon" width="40" />
             </div>
 
             <div className="service-content-box">
@@ -107,11 +105,7 @@ const About: React.FC = () => {
 
           <li className="service-item">
             <div className="service-icon-box">
-              <img
-                src={iconPhoto}
-                alt="camera icon"
-                width="40"
-              />
+              <img src={iconPhoto} alt="camera icon" width="40" />
             </div>
 
             <div className="service-content-box">

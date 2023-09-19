@@ -1,5 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useContext } from "react";
+import classNames from "classnames";
+import { NavContext, NavState } from "providers/NavProvider";
 
 import blogImg1 from "assets/images/blog-1.jpg";
 import blogImg2 from "assets/images/blog-2.jpg";
@@ -9,8 +11,15 @@ import blogImg5 from "assets/images/blog-5.jpg";
 import blogImg6 from "assets/images/blog-6.jpg";
 
 const Blog: React.FC = () => {
+  const { navState } = useContext(NavContext);
+
   return (
-    <article className="blog" data-page="blog">
+    <article
+      className={classNames("blog", {
+        active: navState === NavState.BLOG,
+      })}
+      data-page="blog"
+    >
       <header>
         <h2 className="h2 article-title">Blog</h2>
       </header>
