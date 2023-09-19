@@ -1,10 +1,11 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import { IonIcon } from "@ionic/react";
 import { paperPlane } from "ionicons/icons";
 import React from "react";
 
 const Contact: React.FC = () => {
   return (
-    <article className="contact active" data-page="contact">
+    <article className="contact" data-page="contact">
       <header>
         <h2 className="h2 article-title">Contact</h2>
       </header>
