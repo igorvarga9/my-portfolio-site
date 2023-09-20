@@ -4,21 +4,24 @@ import "./App.css";
 import { SideBar, NavBar } from "components";
 import { About, Blog, Portfolio, Resume, Contact } from "pages";
 import { NavProvider } from "providers/NavProvider";
+import MainLayout from "layouts/MainLayout";
 
 const App: React.FC = () => {
   return (
     <NavProvider>
-      <main>
-        <SideBar />
-        <div className="main-content">
-          <NavBar />
-          <About />
-          <Resume />
-          <Portfolio />
-          <Blog />
-          <Contact />
-        </div>
-      </main>
+      <MainLayout
+        SideBar={<SideBar />}
+        MainContent={
+          <>
+            <NavBar />
+            <About />
+            <Resume />
+            <Portfolio />
+            <Blog />
+            <Contact />
+          </>
+        }
+      />
     </NavProvider>
   );
 };

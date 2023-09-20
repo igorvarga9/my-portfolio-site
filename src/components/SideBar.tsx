@@ -9,11 +9,11 @@ import {
   phonePortraitOutline,
 } from "ionicons/icons";
 import React from "react";
-import myAvatar from "assets/images/my-avatar.png"
+import myAvatar from "assets/images/my-avatar.png";
 
 const SideBar: React.FC = () => {
   return (
-    <aside className="sidebar" data-sidebar>
+    <>
       <div className="sidebar-info">
         <figure className="avatar-box">
           <img src={myAvatar} alt="Richard hanrick" width="80" />
@@ -109,7 +109,7 @@ const SideBar: React.FC = () => {
           </li>
         </ul>
       </div>
-    </aside>
+    </>
   );
 };
 
