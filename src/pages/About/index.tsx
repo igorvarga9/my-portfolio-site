@@ -5,11 +5,11 @@ import React, { useContext } from "react";
 import { NavContext, NavState } from "providers/NavProvider";
 import classNames from "classnames";
 
-import clientLogo1 from "assets/images/logo-1-color.png";
-import clientLogo2 from "assets/images/logo-2-color.png";
-import clientLogo3 from "assets/images/logo-3-color.png";
-import clientLogo4 from "assets/images/logo-4-color.png";
-import clientLogo5 from "assets/images/logo-5-color.png";
+import clientLogo1 from "assets/images/logo-noumena.png";
+import clientLogo2 from "assets/images/logo-skipforce.jpeg";
+import clientLogo3 from "assets/images/logo-desertsoftware.png";
+import clientLogo4 from "assets/images/logo-datemine.png";
+import clientLogo5 from "assets/images/logo-mycashless.jpeg";
 import clientLogo6 from "assets/images/logo-6-color.png";
 import clientAvatar1 from "assets/images/avatar-1.png";
 import clientAvatar2 from "assets/images/avatar-2.png";
@@ -19,7 +19,6 @@ import iconDesign from "assets/images/icon-design.svg";
 import iconDev from "assets/images/icon-dev.svg";
 import iconApp from "assets/images/icon-app.svg";
 import iconPhoto from "assets/images/icon-photo.svg";
-
 
 const About: React.FC = () => {
   const { navState } = useContext(NavContext);
