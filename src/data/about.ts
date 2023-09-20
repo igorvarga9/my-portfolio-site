@@ -1,7 +1,9 @@
-import iconDev from "assets/images/icon-dev.svg";
-import iconApp from "assets/images/icon-app.svg";
-import iconDesign from "assets/images/icon-design.svg";
-import iconPhoto from "assets/images/icon-photo.svg";
+import serviceBusinessImage from "assets/images/service-business.png";
+import serviceArchitectureImage from "assets/images/service-architecture.png";
+import serviceFrontendImage from "assets/images/service-frontend.png";
+import serviceBackendImage from "assets/images/service-backend.png";
+import serviceIntegrationImage from "assets/images/service-integration.png";
+import serviceScheduleImage from "assets/images/service-schedule.png";
 
 import clientAvatar1 from "assets/images/client-brent.jpeg";
 import clientAvatar2 from "assets/images/client-andre.jpeg";
@@ -23,26 +25,35 @@ export const summary = [
 
 export const services = [
   {
-    subject: "Web Development",
-    description: "High-quality development of sites at the professional level.",
-    image: iconDev,
-  },
-  {
-    subject: "Mobile apps",
+    subject: "Business analysis",
     description:
-      "Professional development of applications for iOS and Android.",
-    image: iconApp,
+      "I focus on the needs of your target audience to perform requirements engineering and outline the scope of the solution. I also bridge the gap between business stakeholders and an IT team to keep all the involved parties aligned.",
+    image: serviceBusinessImage,
   },
   {
-    subject: "Web design",
-    description:
-      "The most modern and high-quality design made at a professional level.",
-    image: iconDesign,
+    subject: "Architecture",
+    description: "I will plan all functional components and select optimal techs for them to ensure that the business logic to be implemented is feasible and full. I will also map all API connections within the web solution and with outside systems.",
+    image: serviceArchitectureImage,
   },
   {
-    subject: "Web development",
-    description: "High-quality development of sites at the professional level.",
-    image: iconPhoto,
+    subject: "Front-end development",
+    description: "I can implement any design idea and ensure all interface elements work properly. I work with all most-used JavaScript frameworks, such as Angular, React, and Next.",
+    image: serviceFrontendImage,
+  },
+  {
+    subject: "Back-end development",
+    description: "I accurately implement the business logic of your web app on the back end. I rely on proven frameworks and ensure fast and quality coding in Python, Node.js, and PHP.",
+    image: serviceBackendImage,
+  },
+  {
+    subject: "Integration",
+    description: "I set up APIs to integrate your web app with corporate or third-party systems and services. App integration ensures immediate data synchronization across systems.",
+    image: serviceIntegrationImage,
+  },
+  {
+    subject: "Continuous support and evolution",
+    description: "I advance your web-based software to keep it efficient, competitive on the market, and compliant with all your evolving business needs.",
+    image: serviceScheduleImage,
   },
 ];
 
