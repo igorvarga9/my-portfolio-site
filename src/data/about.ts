@@ -7,6 +7,7 @@ import serviceScheduleImage from "assets/images/service-schedule.png";
 
 import clientAvatar1 from "assets/images/client-brent.jpeg";
 import clientAvatar2 from "assets/images/client-andre.jpeg";
+import clientAvatar3 from "assets/images/client-elliot.jpeg";
 
 import clientLogo1 from "assets/images/logo-noumena.png";
 import clientLogo2 from "assets/images/logo-skipforce.jpeg";
@@ -71,6 +72,12 @@ export const testimonials = [
     feedback:
       "Mark delivered good work on this project and our entire team enjoyed working with him. His communication was top-notch, he met all deadlines, and his skills were strong. He helped us find additional freelancers to support the work. We enjoyed working with Mark and will likely have additional jobs for him in the future.",
     photo: clientAvatar2,
+  },
+  {
+    name: "Elliot Langston",
+    company: "MetricFire - General Manager",
+    feedback: "Mark was very quick, skilled, and easy to communicate with. He is a weapon in python and CI/CD - do not hesitate to hire him, I know that I will be doing so for future projects!",
+    photo: clientAvatar3,
   },
 ];
 
