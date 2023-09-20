@@ -8,24 +8,23 @@ import {
   phonePortraitOutline,
 } from "ionicons/icons";
 import React from "react";
-import myAvatar from "assets/images/mark-profile.jpg";
 
-import data from "assets/json/personal-info.json"
+import { personalInfo } from "data/personal-info";
 
 const SideBar: React.FC = () => {
   return (
     <>
       <div className="sidebar-info">
         <figure className="avatar-box">
-          <img src={myAvatar} alt="Richard hanrick" width="80" />
+          <img src={personalInfo.photo} alt={personalInfo.name} width="80" />
         </figure>
 
         <div className="info-content">
           <h1 className="name">
-            {data.name}
+            {personalInfo.name}
           </h1>
 
-          <p className="title">{data.title}</p>
+          <p className="title">{personalInfo.title}</p>
         </div>
 
         <button className="info_more-btn" data-sidebar-btn>
@@ -47,8 +46,8 @@ const SideBar: React.FC = () => {
             <div className="contact-info">
               <p className="contact-title">Email</p>
 
-              <a href={`mailto:${data.email}`} className="contact-link">
-                {data.email}
+              <a href={`mailto:${personalInfo.email}`} className="contact-link">
+                {personalInfo.email}
               </a>
             </div>
           </li>
@@ -61,8 +60,8 @@ const SideBar: React.FC = () => {
             <div className="contact-info">
               <p className="contact-title">Phone</p>
 
-              <a href={`tel:${data.phone}`} className="contact-link">
-                {data.phone}
+              <a href={`tel:${personalInfo.phone}`} className="contact-link">
+                {personalInfo.phone}
               </a>
             </div>
           </li>
@@ -75,7 +74,7 @@ const SideBar: React.FC = () => {
             <div className="contact-info">
               <p className="contact-title">Birthday</p>
 
-              <time dateTime="1982-06-23">{data.dob}</time>
+              <time dateTime={personalInfo.dob}>{personalInfo.dob}</time>
             </div>
           </li>
 
@@ -87,7 +86,7 @@ const SideBar: React.FC = () => {
             <div className="contact-info">
               <p className="contact-title">Location</p>
 
-              <address>{data.location}</address>
+              <address>{personalInfo.location}</address>
             </div>
           </li>
         </ul>
@@ -96,7 +95,7 @@ const SideBar: React.FC = () => {
 
         <ul className="social-list">
           <li className="social-item">
-            <a href={data.github} className="social-link" target="blank">
+            <a href={personalInfo.github} className="social-link" target="blank">
               <IonIcon icon={logoGithub} />
             </a>
           </li>
