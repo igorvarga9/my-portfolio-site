@@ -1,6 +1,4 @@
-import { IonIcon } from "@ionic/react";
-import { summary, testimonials } from "data/about";
-import { closeOutline } from "ionicons/icons";
+import { testimonials } from "data/about";
 import React from "react";
 
 export const Testimonials: React.FC = () => {
@@ -10,8 +8,8 @@ export const Testimonials: React.FC = () => {
         <h3 className="h3 testimonials-title">Testimonials</h3>
 
         <ul className="testimonials-list has-scrollbar">
-          {testimonials.map((testimonial) => (
-            <li className="testimonials-item">
+          {testimonials.map((testimonial, i) => (
+            <li className="testimonials-item" key={`testimonial-${i}`}>
               <div className="content-card" data-testimonials-item>
                 <figure className="testimonials-avatar-box">
                   <img

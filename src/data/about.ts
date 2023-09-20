@@ -5,8 +5,6 @@ import iconPhoto from "assets/images/icon-photo.svg";
 
 import clientAvatar1 from "assets/images/client-brent.jpeg";
 import clientAvatar2 from "assets/images/client-andre.jpeg";
-import clientAvatar3 from "assets/images/avatar-3.png";
-import clientAvatar4 from "assets/images/avatar-4.png";
 
 import clientLogo1 from "assets/images/logo-noumena.png";
 import clientLogo2 from "assets/images/logo-skipforce.jpeg";

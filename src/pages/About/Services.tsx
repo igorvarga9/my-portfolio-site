@@ -7,8 +7,8 @@ export const Services: React.FC = () => {
       <h3 className="h3 service-title">What i'm doing</h3>
 
       <ul className="service-list">
-        {services.map((service) => (
-          <li className="service-item">
+        {services.map((service, i) => (
+          <li className="service-item" key={`service-${i}`}>
             <div className="service-icon-box">
               <img src={service.image} alt="design icon" width="40" />
             </div>
