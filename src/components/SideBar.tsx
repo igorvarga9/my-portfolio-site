@@ -3,13 +3,14 @@ import {
   calendarOutline,
   chevronDown,
   locationOutline,
-  logoFacebook,
   logoGithub,
   mailOutline,
   phonePortraitOutline,
 } from "ionicons/icons";
 import React from "react";
-import myAvatar from "assets/images/my-avatar.png";
+import myAvatar from "assets/images/mark-profile.jpg";
+
+import data from "assets/json/personal-info.json"
 
 const SideBar: React.FC = () => {
   return (
@@ -20,11 +21,11 @@ const SideBar: React.FC = () => {
         </figure>
 
         <div className="info-content">
-          <h1 className="name" title="Richard hanrick">
-            Richard hanrick
+          <h1 className="name">
+            {data.name}
           </h1>
 
-          <p className="title">Web developer</p>
+          <p className="title">{data.title}</p>
         </div>
 
         <button className="info_more-btn" data-sidebar-btn>
@@ -46,8 +47,8 @@ const SideBar: React.FC = () => {
             <div className="contact-info">
               <p className="contact-title">Email</p>
 
-              <a href="mailto:richard@example.com" className="contact-link">
-                richard@example.com
+              <a href={`mailto:${data.email}`} className="contact-link">
+                {data.email}
               </a>
             </div>
           </li>
@@ -60,35 +61,33 @@ const SideBar: React.FC = () => {
             <div className="contact-info">
               <p className="contact-title">Phone</p>
 
-              <a href="tel:+12133522795" className="contact-link">
-                +1 (213) 352-2795
+              <a href={`tel:${data.phone}`} className="contact-link">
+                {data.phone}
               </a>
             </div>
           </li>
 
           <li className="contact-item">
             <div className="icon-box">
-              {/* <ion-icon name="calendar-outline"></ion-icon> */}
               <IonIcon icon={calendarOutline} />
             </div>
 
             <div className="contact-info">
               <p className="contact-title">Birthday</p>
 
-              <time dateTime="1982-06-23">June 23, 1982</time>
+              <time dateTime="1982-06-23">{data.dob}</time>
             </div>
           </li>
 
           <li className="contact-item">
             <div className="icon-box">
-              {/* <ion-icon name="location-outline"></ion-icon> */}
               <IonIcon icon={locationOutline} />
             </div>
 
             <div className="contact-info">
               <p className="contact-title">Location</p>
 
-              <address>Sacramento, California, USA</address>
+              <address>{data.location}</address>
             </div>
           </li>
         </ul>
@@ -97,13 +96,7 @@ const SideBar: React.FC = () => {
 
         <ul className="social-list">
           <li className="social-item">
-            <a href="https://facebook.com" className="social-link">
-              <IonIcon icon={logoFacebook} />
-            </a>
-          </li>
-
-          <li className="social-item">
-            <a href="https://github.com" className="social-link">
+            <a href={data.github} className="social-link" target="blank">
               <IonIcon icon={logoGithub} />
             </a>
           </li>
