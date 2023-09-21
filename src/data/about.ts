@@ -84,9 +84,9 @@ export const testimonials = [
 export const clients = [
   { logo: clientLogo1, url: "https://app.noumena.pro/" },
   { logo: clientLogo7, url: "https://www.metricfire.com/" },
-  { logo: clientLogo5, url: "https://mycashless.com/" },
+  // { logo: clientLogo5, url: "https://mycashless.com/" },
   { logo: clientLogo6, url: "https://resources.istcoalition.org/fulton-works" },
-  { logo: clientLogo2, url: "https://skipforce.com/" },
-  { logo: clientLogo3, url: "https://www.desertsoftware.com.au/" },
+  // { logo: clientLogo2, url: "https://skipforce.com/" },
+  // { logo: clientLogo3, url: "https://www.desertsoftware.com.au/" },
   { logo: clientLogo4, url: "https://staging-app.datareporter.com" },
 ];
